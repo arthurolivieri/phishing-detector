@@ -1,2 +1,2 @@
-# arthuro-af-techack
-Repositório da Avaliação Final de Tecnologias Hacker
+# Phishing Detector
+Repositório da Avaliação Final de Tecnologias Hacker - Arthur Olivieri
