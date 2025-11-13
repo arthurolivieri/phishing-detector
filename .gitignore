@@ -1,0 +1,35 @@
+# Dependências Python
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/.Python
+backend/env/
+backend/ENV/
+
+# Dependências Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Arquivos de configuração do editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.*.local

@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  # Backend - FastAPI
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: phishing-detector-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - /app/venv  # Evitar conflitos com venv local
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - phishing-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Frontend - React + Vite
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: phishing-detector-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules  # Evitar conflitos com node_modules local
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    networks:
+      - phishing-network
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+networks:
+  phishing-network:
+    driver: bridge
