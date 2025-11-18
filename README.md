@@ -6,6 +6,8 @@ Ferramenta para detecção de URLs de phishing desenvolvida para a disciplina de
 
 Sistema de detecção de phishing que implementa os requisitos do **Conceito C**, realizando verificações básicas de URLs suspeitas através de uma interface web simples e intuitiva.
 
+Vídeo de demonstração: https://youtu.be/sjlkWRMyo4s
+
 ## ✨ Funcionalidades
 
 ### Verificações Implementadas
@@ -67,23 +69,6 @@ docker compose up --build
 
 > **Nota**: A base de dados `phishing.db` já está incluída no repositório com ~50.000 URLs de phishing carregadas.
 
-## 🛠️ Tecnologias
-
-### Backend
-- **FastAPI**: Framework web Python moderno e rápido
-- **SQLite**: Banco de dados para armazenamento de URLs maliciosas
-- **Uvicorn**: Servidor ASGI de alta performance
-- **Python 3.11**
-
-### Frontend
-- **React 18**: Biblioteca JavaScript para interfaces
-- **Vite**: Build tool rápida
-- **Tailwind CSS**: Framework CSS utilitário
-- **shadcn/ui**: Componentes UI modernos
-
-### Infraestrutura
-- **Docker & Docker Compose**: Containerização e orquestração
-
 ## 📡 API Endpoints
 
 - `GET /` - Informações da API
@@ -139,26 +124,3 @@ phishing-detector/
 ├── compose.yaml             # Orquestração Docker
 └── README.md
 ```
-
-## 👨‍💻 Desenvolvimento
-
-Para desenvolvimento local sem Docker:
-
-### Backend
-```bash
-cd backend
-pip install -r requirements.txt
-python load_phishing_db.py  # Primeira vez apenas
-uvicorn main:app --reload
-```
-
-### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-## 📄 Licença
-
-Projeto acadêmico - Insper 2024
