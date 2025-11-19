@@ -6,7 +6,7 @@ Ferramenta para detecção de URLs de phishing desenvolvida para a disciplina de
 
 Sistema de detecção de phishing que implementa os requisitos do **Conceito C**, realizando verificações básicas de URLs suspeitas através de uma interface web simples e intuitiva.
 
-Vídeo de demonstração: https://youtu.be/sjlkWRMyo4s
+Vídeo de demonstração: https://youtu.be/m_IG7jse4YY
 
 ## ✨ Funcionalidades
 
